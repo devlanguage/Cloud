@@ -1,0 +1,5 @@
+::1     localhost6.localdomain6 localhost6
+127.0.0.1     localhost.localdomain   localhost
+172.29.16.174 cnsh2wlab1137v.tellabs.fi   cnsh2wlab1137v hserver1
+172.29.14.113 cnsh2wlab1138v.tellabs.fi   cnsh2wlab1138v hserver2
+172.29.14.114 cnsh2wlab1186v.tellabs.fi   cnsh2wlab1186v hserver3

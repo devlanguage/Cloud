@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hbase-0.20.4"/>
+	<classpathentry kind="lib" path="hbase_home/lib/hadoop-common-2.5.1.jar" sourcepath="hadoop_home_251/src"/>
+	<classpathentry kind="lib" path="hbase_home/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/hbase-client-1.0.0.jar" sourcepath="hbase_home"/>
+	<classpathentry kind="lib" path="hbase_home/lib/hbase-common-1.0.0.jar" sourcepath="hbase_home"/>
+	<classpathentry kind="lib" path="hbase_home/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/hbase-protocol-1.0.0.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/protobuf-java-2.5.0.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/guava-12.0.1.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/zookeeper-3.4.6.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/commons-configuration-1.6.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/hadoop-auth-2.5.1.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/slf4j-log4j12-1.7.7.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/htrace-core-3.1.0-incubating.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/netty-3.2.4.Final.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/netty-all-4.0.23.Final.jar"/>
+	<classpathentry kind="lib" path="hbase_home/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,22 @@
+------First Time
+1) init the files
+  ssh $HSERVER "source ~/.profile; rm -fr ${HDATA}/*"
+  ssh $HSERVER "source ~/.profile; mkdir -p ${HDATA}/dfs/data; mkdir -p ${HDATA}/dfs/name"
+  ssh $HSERVER "source ~/.profile; mkdir -p ${HDATA}/mapred/system; mkdir -p ${HDATA}/mapred/local"
+  ssh $HSERVER "source ~/.profile; mkdir -p ${HDATA}/tmp"
+  ssh $HSERVER "source ~/.profile; mkdir -p ${HDATA}/journal"  
+  ssh $HSERVER "source ~/.profile; mkdir -p ${HDATA}/yarn/local; mkdir -p ${HDATA}/yarn/log"
+  ssh $HSERVER "source ~/.profile; mkdir -p ${HDATA}/zookeeper/data; mkdir -p ${HDATA}/zookeeper/log/remote"
+  
+--hserver1$  start-nam
+--hserver1$  hdfs namenode -format
+
+hserver1$  start-dfs.sh   #####namenode, datanode, secondarynode
+hserver3$  start-yarn.sh
+hserver1$  hdfs hadmin -transitionToActive nn1
+
+hserver3$  stop-yarn.sh
+hserver1$  stop-dfs.sh
+
+
+

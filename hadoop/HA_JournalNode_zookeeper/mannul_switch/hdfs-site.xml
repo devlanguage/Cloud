@@ -1,0 +1,61 @@
+<configuration>
+	<property>
+		<name>dfs.nameservices</name>
+		<value>cluster1</value>
+		<description>nameservices名称，多个名称用逗号隔开</description>
+	</property>
+
+	<property>
+		<name>dfs.ha.namenodes.cluster1</name>
+		<value>nn1,nn2</value>
+		<description>dfs.nameservices中定义的nameservice中包含的namenode,多个namenode用逗号隔开。</description>
+	</property>
+
+	<property>
+		<name>dfs.namenode.rpc-address.cluster1.nn1</name>
+		<value>product201:8020</value>
+	</property>
+
+	<property>
+		<name>dfs.namenode.rpc-address.cluster1.nn2</name>
+		<value>product202:8020</value>
+	</property>
+
+	<property>
+		<name>dfs.namenode.http-address.cluster1.nn1</name>
+		<value>product201:50070</value>
+	</property>
+
+	<property>
+		<name>dfs.namenode.http-address.cluster1.nn2</name>
+		<value>product202:50070</value>
+	</property>
+
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>file:///app/hadoop/hadoop220/mydata/name</value>
+		<description>保存fsimage的目录，多个逗号隔开的目录可以作为冗余。</description>
+	</property>
+
+	<property>
+		<name>dfs.namenode.shared.edits.dir</name>
+		<value>qjournal://product202:8485;product203:8485;product204:8485/cluster1</value>
+		<description>多个namenode共享目录，为实施HA而存放EditLog。对于非HA系统为空。</description>
+	</property>
+
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>file:///app/hadoop/hadoop220/mydata/data</value>
+	</property>
+
+	<property>
+		<name>dfs.ha.automatic-failover.enabled</name>
+		<value>false</value>
+	</property>
+
+	<property>
+		<name>dfs.journalnode.edits.dir</name>
+		<value>/app/hadoop/hadoop220/mydata/journal/</value>
+		<description>HA方式JournalNode节点存放EditLog的目录</description>
+	</property>
+</configuration>

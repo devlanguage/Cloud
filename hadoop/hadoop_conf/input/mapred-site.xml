@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+  <!-- optional -->
+  <property>
+    <name>mapreduce.job.tracker</name>
+    <value>hdfs://hserver1:9001</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>1536</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.java.opts</name>
+    <value>-Xmx1024M</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>3072</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.java.opts</name>
+    <value>-Xmx2560M</value>
+  </property>
+
+  <property>
+    <name>mapreduce.task.io.sort.mb</name>
+    <value>512</value>
+  </property>
+
+  <property>
+    <name>mapreduce.task.io.sort.factor</name>
+    <value>100</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.shuffle.parallelcopies</name>
+    <value>50</value>
+  </property>
+
+  <property>
+    <name>mapred.system.dir</name>
+    <value>file:/home/ygong/hdata/mapred/system</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <name>mapred.local.dir</name>
+    <value>file:/home/ygong/hdata/mapred/local</value>
+    <final>true</final>
+  </property>
+</configuration>

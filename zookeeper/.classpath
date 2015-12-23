@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="zookeeper_home/src/java/systest"/>
+	<classpathentry kind="src" path="zookeeper_home/src/java/main"/>
+	<classpathentry kind="src" path="zookeeper_home/recipes/election/src/java"/>
+	<classpathentry kind="src" path="zookeeper_home/recipes/lock/src/java"/>
+	<classpathentry kind="src" path="zookeeper_home/recipes/queue/src/java"/>
+	<classpathentry kind="src" path="zookeeper_home/src/recipes/queue/test"/>
+	<classpathentry kind="src" path="zookeeper_home/src/java/test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="zookeeper_home/zookeeper-3.4.6.jar"/>
+	<classpathentry kind="lib" path="hadoop_home/share/hadoop/common/lib/log4j-1.2.17.jar" sourcepath="C:/OpenSrc/apache/apache-log4j-1.2.17"/>
+	<classpathentry kind="lib" path="hadoop_home/share/hadoop/common/lib/slf4j-api-1.7.5.jar" sourcepath="C:/OpenSrc/misc/slf4j-1.7.5"/>
+	<classpathentry kind="lib" path="hadoop_home/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar" sourcepath="C:/OpenSrc/misc/slf4j-1.7.5"/>
+	<classpathentry kind="lib" path="hadoop_home/share/hadoop/common/lib/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="zookeeper_home/lib/netty-3.7.0.Final.jar"/>
+	<classpathentry kind="lib" path="zookeeper_home/lib/jline-0.9.94.jar"/>
+	<classpathentry kind="lib" path="bookkeeper_home/bookkeeper-server-4.3.0.jar" sourcepath="bookkeeper_home/src"/>
+	<classpathentry kind="lib" path="bookkeeper_home/lib/commons-configuration-1.6.jar"/>
+	<classpathentry kind="lib" path="bookkeeper_home/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="bookkeeper_home/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="bookkeeper_home/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="bookkeeper_home/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="bookkeeper_home/lib/bookkeeper-stats-api-4.3.0.jar"/>
+	<classpathentry kind="lib" path="hadoop_home/share/hadoop/common/lib/mockito-all-1.8.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

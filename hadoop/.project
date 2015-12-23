@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>hadooptest</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>hadoop_home</name>
+			<type>2</type>
+			<locationURI>hadoop_home</locationURI>
+		</link>
+		<link>
+			<name>hadoop_output</name>
+			<type>2</type>
+			<location>C:/Users/ygong/workspace/hadoop_output</location>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>hadoop_home</name>
+			<value>file:/C:/OpenSrc/soa_hadop/hadoop-2.5.2</value>
+		</variable>
+	</variableList>
+</projectDescription>

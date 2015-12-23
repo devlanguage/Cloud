@@ -1,0 +1,19 @@
+A：启动JournalNode节点product202、product203、product204
+  sbin/hadoop-daemon.sh start journalnode
+B：格式化namenode
+  [hadoop@product201 hadoop220]$ bin/hdfs namenode -format
+C：启动nn1
+[hadoop@product201 hadoop220]$ sbin/hadoop-daemon.sh start namenode
+
+D：启动nn2
+在nn2上同步nn1的元数据信息
+[hadoop@product202 hadoop220]$ bin/hdfs namenode -bootstrapStandby
+启动nn2
+[hadoop@product202 hadoop220]$ sbin/hadoop-daemon.sh start namenode
+
+E：将nn1切换成active并启动datanode
+[hadoop@product201 hadoop220]$ bin/hdfs haadmin -transitionToActive nn1
+[hadoop@product201 hadoop220]$ sbin/hadoop-daemons.sh start datanode
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:/home/ygong/hdata/dfs/name</value>
+    <description>Determines where on the local filesystem the DFS name node should store the name table.If this is a comma-delimited list of
+      directories,then name table is replicated in all of the directories,for redundancy.
+    </description>
+    <final>true</final>
+  </property>
+  <property>
+    <name>dfs.namenode.data.dir</name>
+    <value>file:/home/ygong/hdata/dfs/data</value>
+    <description>Determines where on the local filesystem an DFS data node should store its blocks.If this is a comma-delimited list of
+      directories,then data will be stored in all named directories,typically on different devices.Directories that do not exist are
+      ignored.
+    </description>
+  </property>
+  <property>
+    <name>dfs.replication</name>
+    <value>2</value>
+    <description>By default: 3. it > the number of noes in cluster, errors will be reported</description>
+  </property>
+</configuration>

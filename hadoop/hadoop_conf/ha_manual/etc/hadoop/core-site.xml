@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://mycluster</value>
+		<!-- <value>hdfs://hserver1:9000</value> -->
+	</property>
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value>/home/ygong/hdata/tmp</value>
+	</property>
+	
+	<!-- Automatic cluster -->
+	<!--  
+ 	<property>
+		<name>ha.zookeeper.quorum</name>
+		<value>hserver1:31315,hserver2:31315,hserver3:31315</value>
+	</property>
+	<property>
+		<name>dfs.journalnode.edits.dir</name>
+		<value>/home/ygong/hdata/journal</value>
+	</property>
+	 -->
+
+	<!-- <property> <name>io,native.lib.available</name> <value>true</value> </property> -->
+	<property>
+		<name>fs.trash.interval</name>
+		<value>10080</value>
+		<description>Number of minutes between trash checkpoints. If zero, the trash feature is disabled. Files removed will be moved to directory.Trash under current directory</description>
+	</property>
+	<property>
+		<name>fs.checkpoint.period</name>
+		<value>60</value>
+		<description>The number of seconds between two periodic checkpoints.</description>
+	</property>
+	<property>
+		<name>fs.checkpoint.size</name>
+		<value>67108864</value>
+	</property>
+</configuration>

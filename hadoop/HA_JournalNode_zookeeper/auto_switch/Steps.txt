@@ -1,0 +1,12 @@
+[hadoop@product202 hadoop220]$ /app/hadoop/zookeeper345/bin/zkServer.sh start
+[hadoop@product203 hadoop220]$ /app/hadoop/zookeeper345/bin/zkServer.sh start
+[hadoop@product204 hadoop220]$ /app/hadoop/zookeeper345/bin/zkServer.sh start
+[hadoop@product201 etc]$ cd ..
+[hadoop@product201 hadoop220]$ bin/hdfs zkfc -formatZK
+[hadoop@product201 hadoop220]$ sbin/start-dfs.sh
+8：故障转移测试
+[hadoop@product201 hadoop220]$ jps
+[hadoop@product201 hadoop220]$ bin/hdfs haadmin -getServiceState nn1
+[hadoop@product201 hadoop220]$ kill -9 5792
+[hadoop@product201 hadoop220]$ bin/hdfs haadmin -getServiceState nn1
+[hadoop@product201 hadoop220]$ bin/hdfs haadmin -getServiceState nn2

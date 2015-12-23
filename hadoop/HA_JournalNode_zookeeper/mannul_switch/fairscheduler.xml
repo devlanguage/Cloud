@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocations>
+	<queue name="news">
+		<minResources>10240 mb, 10 vcores </minResources>
+		<maxResources>15360 mb, 12 vcores </maxResources>
+		<maxRunningApps>20</maxRunningApps>
+		<minSharePreemptionTimeout>300</minSharePreemptionTimeout>
+		<weight>1.0</weight>
+		<aclSubmitApps>root,yarn,search,hdfs</aclSubmitApps>
+	</queue>
+
+	<queue name="crawler">
+		<minResources>10240 mb, 10 vcores</minResources>
+		<maxResources>15360 mb, 12 vcores</maxResources>
+	</queue>
+
+	<queue name="map">
+		<minResources>10240 mb, 10 vcores</minResources>
+		<maxResources>15360 mb, 12 vcores</maxResources>
+	</queue>
+</allocations>

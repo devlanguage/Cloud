@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>file:/home/ygong/hdata/dfs/name</value>
+		<description>Determines where on the local filesystem the DFS name node should store the name table.If this is a comma-delimited list of
+			directories,then name table is replicated in all of the
+			directories,for redundancy.
+		</description>
+	</property>
+	<property>
+		<!-- <name>dfs.namenode.data.dir</name> -->
+		<name>dfs.datanode.data.dir</name>
+		<value>file:/home/ygong/hdata/dfs/data</value>
+		<description>Determines where on the local filesystem an DFS data node should store its blocks.If this is a comma-delimited list of
+			directories,then data will be stored in all named
+			directories,typically on different devices.Directories that do not exist are
+			ignored.
+		</description>
+	</property>
+	<property>
+		<name>dfs.replication</name>
+		<value>3</value>
+		<description>By default: 3. if it is less than the number of nodes in cluster, errors will be reported</description>
+	</property>	<property>
+		<name>dfs.replication.max</name>
+		<value>152</value>
+		<description>By default: 152. Maximal block replication.</description>
+	</property>
+	<!-- secondary name node configuration in yarn to avoid single point fault -->
+	<property>
+		<name>dfs.nameservices</name>
+		<value>mycluster</value>
+	</property>
+	<property>
+		<name>dfs.ha.namenodes.mycluster</name>
+		<value>nn1,nn2</value>
+		<description>The prefix for a given nameservice, contains a comma-separated list of namenodes for a given nameservice (eg EXAMPLENAMESERVICE).</description>
+	</property>
+	<property>
+		<name>dfs.namenode.rpc-address.mycluster.nn1</name>
+		<value>hserver1:9000</value>
+	</property>
+	<property>
+		<name>dfs.namenode.rpc-address.mycluster.nn2</name>
+		<value>hserver2:9000</value>
+	</property>
+	<property>
+		<name>dfs.namenode.http-address.mycluster.nn1</name>
+		<value>hserver1:50070</value>
+	</property>
+	<property>
+		<name>dfs.namenode.http-address.mycluster.nn2</name>
+		<value>hserver2:50070</value>
+	</property>
+	<property>
+		<name>dfs.namenode.secondary.http-address.mycluster.nn1</name>
+		<value>hserver1:50090</value>
+	</property>
+	<property>
+		<name>dfs.namenode.secondary.http-address.mycluster.nn2</name>
+		<value>hserver2:50090</value>
+	</property>
+	
+	<!-- Manual Failover dfs.ha.automatic-failover.enabled=false -->
+	<property>
+		<name>dfs.namenode.shared.edits.dir</name>
+		<value>qjournal://hserver1:8485;hserver2:8485;hserver3:8485/mycluster</value>
+		<description>多个namenode共享目录，为实施HA而存放EditLog。对于非HA系统为空。</description>
+	</property>
+	<property>
+		<name>dfs.journalnode.edits.dir</name>
+		<value>/home/ygong/hdata/journal</value>
+	</property>
+	<property>
+		<name>dfs.client.failover.proxy.provider.mycluster</name>
+		<value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+		<description> Configure the name of the Java class which will be used by the DFS Client to determine which NameNode is the current Active, and therefore which NameNode is currently serving client
+			requests.
+		</description>
+	</property>
+	<property>
+		<name>dfs.namenode.handler.count</name>
+		<value>8</value>
+	</property>
+	<!-- <property> <name>ha.zookeeper.quorum</name> <value>hserver1:31315,hserver2:31315,hserver3:31315</value> </property> <property> <name>dfs.journalnode.edits.dir</name> <value>/app/hadoop/hadoop220/mydata/journal/</value> 
+		<description>HA方式JournalNode节点存放EditLog的目录</description> </property> -->
+	<property>
+		<name>dfs.ha.automatic-failover.enabled</name>
+		<value>false</value>
+		<description>Whether automatic failover is enabled. See the HDFS High Availability documentation for details on automatic HA configuration.</description>
+	</property>
+	<!-- Autmatic Failover: dfs.ha.automatic-failover.enabled=true -->
+	<!-- <property> <name>dfs.ha.automatic-failover.enabled</name> <value>true</value> <description>Whether automatic failover is enabled. See the HDFS High Availability documentation for details on automatic 
+		HA configuration.</description> </property> <property> <name>dfs.ha.fencing.methods</name> <value>sshfence</value> <description>how to communicate in the switch process</description> </property> <property> 
+		<name>dfs.ha.fencing.ssh.private-key-files</name> <value>/home/ygong/.ssh/id_rsa</value> <description>the location stored ssh key</description> </property> <property> <name>dfs.ha.fencing.ssh.connect-timeout</name> 
+		<value>1000</value> </property> -->
+</configuration>
